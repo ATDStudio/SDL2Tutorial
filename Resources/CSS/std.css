@@ -1,0 +1,8 @@
+article { display : block;
+	padding :15px;
+	margin : 10px;
+	background-color : gray
+	padding-left : 1px;
+	box-shadow : 1px 2px 2px 1px gray;
+	margin :10px 0 10px 0;
+	}

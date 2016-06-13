@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Base -- The First SDL2 Program</title>
+		<meta charset='utf-8'/>
+		<link rel="stylesheet" type="text/css" href="../Resources/CSS/std.css"/>
+	</head>
+	<body>
+<!-- 这里添加Markdown -->
+<textarea theme="cerulean" style="display:none;">
+###第一个SDL2程序
+<hr/>
+<article>
+<p>本小节将会为你展现出一个最为简单的SDL2程序，在进入这段教程之前请务必确定你已配置好你的SDL2开发环境。</p>
+</article>
+``` C
+#include "SDL2/SDL.h"
+int main(int argc,char *argv[]){
+	SDL_Init(SDL_INIT_EVERYTHING);
+	SDL_Quit();
+	return 0;
+}
+```
+这就是一个最为基础的SDL2程序，看上去极为简单是不是？这段代码唯一的意义或许只有检测你SDL2环境是否搭建成功了，然而其所包含着的则是所有SDL2远目的基本外层——初始化与关闭。
+
+或许你会疑惑里面函数的意义，或许你是第一次看见这样的main原型，不用担心，把这段代码复制到你的编译器中并试试看编译它，如果没有通过编译那么就请返回前一小节检测你SDL2开发环境的配置，而如果编译成功了，那么就请带着你的开发环境前往下一节，在那里，本教程将会告诉你SDL2图形实现的基础以及这些函数的具体意义。
+
+下一节：[如何显示一张图片——窗口，纹理，表面，纹理，渲染器](2.html "2.html")
+
+<hr/>
+[返回目录](Directory.html "Directory.html")
+
+[返回教程首页](../index.html "index.html")
+</textarea>
+	</body>
+	<script src="../Resources/JavaScript/strapdown/strapdown.fmt.js"></script>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Base -- Display a Picture</title>
+		<meta charset='utf-8'/>
+		<link rel="stylesheet" type="text/css" href="../Resources/CSS/std.css"/>
+	</head>
+	<body>
+<!-- 这里添加Markdown -->
+<textarea theme="cerulean" style="display:none;">
+##显示一张图片
+####——窗口，纹理，表面，纹理，渲染器
+<hr/>
+<article>
+<p>本节将会给出一个能够现实一张图片的SDL2版Hello</p>
+</article>
+<hr/>
+#####Hello of SDL2
+``` C
+#include "SDL2/SDL.h"
+int main(int argc,char *argv[]){
+	SDL_Surface *HelloSur;
+	SDL_Window *MainWin;
+	SDL_Renderer *HelloRend;
+	SDL_Texture *HelloTex;
+	
+	SDL_Init(SDL_INIT_EVERYTHING);
+	
+	MainWin = SDL_CreateWindow("hello world",0,0,480,240,SDL_RENDERER_ACCELERATED);
+	HelloSur = SDL_LoadBMP("hello.bmp");
+	
+	HelloRend = SDL_CreateRenderer(MainWin,-1,SDL_RENDERER_ACCELERATED);
+	HelloTex = SDL_CreateTextureFromSurface(HelloRend,HelloSur);
+	
+	SDL_RenderCopy(HelloRend,HelloTex,NULL,NULL);
+	SDL_RenderPresent(MainRend);
+	SDL_Delay(2000);
+	
+	SDL_Quit();
+	
+	return 0;
+}
+```
+看上去有点让人眼花缭乱是不是？这些指针，结构体，以及函数构成了庞大的SDL2库，接下来我们将会以上面这个程序为基准对SDL2API进行一个粗略的了解。
+
+首先，程序的基础是SDL2的头文件
+``` C
+#include "SDL2/SDL.h"
+```
+包含这个头文件是使用SDL2强大功能所必须的，它包含了其他的底层，并提供了我们使用的各种API的原型。
+
+接着我们暂且不必去管开头创建的那四个指针，
+下一节：[游戏显示基础——精灵图的裁剪和区域渲染](3.html "3.html")
+
+<hr/>
+[返回目录](Directory.html "Directory.html")
+
+[返回教程首页](../index.html "index.html")
+</textarea>
+	</body>
+	<script src="../Resources/JavaScript/strapdown/strapdown.fmt.js"></script>
+</html>
